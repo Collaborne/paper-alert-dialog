@@ -1,0 +1,39 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/paper-dialog/paper-dialog.html">
+<link rel="import" href="../../bower_components/paper-button/paper-button.html">
+
+<dom-module id="paper-alert-dialog">
+
+	<template>
+		<paper-dialog id='dialog' modal>
+		    <h2>[[title]]</h2>
+		    <p>[[message]]</p>
+			<div class='buttons'>
+				<paper-button dialog-confirm autofocus>[[button]]</paper-button>
+			</div>
+		</paper-dialog>
+	</template>
+	         
+</dom-module>
+
+<script>
+
+(function() {
+
+	Polymer({
+		is: 'paper-alert-dialog',
+		properties: {
+			title: String,
+			message: String,
+			button: String
+		},
+		
+		// Public methods
+		open: function() {
+			this.$.dialog.open();
+		}
+	});
+
+})();
+
+</script>
