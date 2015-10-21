@@ -1,7 +1,7 @@
 paper-alert-dialog [![Bower version](https://badge.fury.io/bo/paper-alert-dialog.svg)](http://badge.fury.io/bo/paper-alert-dialog)
 =========
 
-'paper-alert-dialog' renders a material design dialog to alert user (Polymer 1.x).
+'paper-alert-dialog' renders a material design dialog to alert users (Polymer 1.x).
 
 
 ## Usage
