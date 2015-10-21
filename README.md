@@ -9,7 +9,11 @@ paper-alert-dialog [![Bower version](https://badge.fury.io/bo/paper-alert-dialog
 `bower install paper-alert-dialog`
 
 ```html
-<paper-alert-dialog title="Congratulations" message="It work's!" button="OK"></paper-alert-dialog>
+<paper-alert-dialog
+  title="Congratulations"
+  message="It work's!"
+  button="OK">
+</paper-alert-dialog>
 ```
 
 
