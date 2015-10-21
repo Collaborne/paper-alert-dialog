@@ -32,6 +32,11 @@ Property | Description
 There is no explicit close() method because the user is expected to click the confirm button.
 
 
+## Continuous integration
+
+[Travis-CI](https://travis-ci.org/Collaborne/paper-alert-dialog) [![Travis state](https://travis-ci.org/Collaborne/paper-alert-dialog.svg?branch=master)](https://travis-ci.org/Collaborne/paper-alert-dialog)
+
+
 ## License
 
     This software is licensed under the Apache 2 license, quoted below.
