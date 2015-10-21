@@ -11,7 +11,7 @@ paper-alert-dialog [![Bower version](https://badge.fury.io/bo/paper-alert-dialog
 ```html
 <paper-alert-dialog
   title="Congratulations"
-  message="It work's!"
+  message="It works!"
   button="OK">
 </paper-alert-dialog>
 ```
