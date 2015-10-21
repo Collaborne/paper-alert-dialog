@@ -1,0 +1,21 @@
+<html>
+	<head>
+	    <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+		<link rel="import" href="../paper-alert-dialog.html">
+	</head>
+	
+	<body>
+		<paper-alert-dialog id="alert-dialog" title="Congratulations" message="It work's!" button="OK"></paper-alert-dialog>
+		
+		<button type="button" onclick="openDialog()">Open</button>
+	
+		<script>
+			function openDialog() {
+				var dialog = document.getElementById("alert-dialog");
+				if (dialog) {
+					dialog.open();
+				}
+		    }
+		</script>
+	</body>
+</html>
