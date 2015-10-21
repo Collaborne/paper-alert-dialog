@@ -5,9 +5,9 @@
 <dom-module id="paper-alert-dialog">
 
 	<template>
-		<paper-dialog id='dialog' modal>
-			<h2>[[title]]</h2>
-			<p>[[message]]</p>
+		<paper-dialog id='dialog' opened={{opened}} modal>
+		    <h2>[[title]]</h2>
+		    <p>[[message]]</p>
 			<div class='buttons'>
 				<paper-button dialog-confirm autofocus>[[button]]</paper-button>
 			</div>
@@ -25,7 +25,11 @@
 		properties: {
 			title: String,
 			message: String,
-			button: String
+			button: String,
+			opened: {
+				true: Boolean,
+				notify: true
+			}
 		},
 		
 		// Public methods
