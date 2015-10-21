@@ -31,17 +31,17 @@
 					
 					test('sets title based on title attribute', function() {
 						var title = Polymer.dom(element.root).querySelector("h2");
-						expect(title.innerText).to.be.eql("Congratulations");
+						expect(title.textContent).to.be.eql("Congratulations");
 					});
 
 					test('sets message based on message attribute', function() {
 						var message = Polymer.dom(element.root).querySelector("p");
-						expect(message.innerText).to.be.eql("It work's!");
+						expect(message.textContent).to.be.eql("It work's!");
 					});
 
 					test('sets button based on button attribute', function() {
 						var button = Polymer.dom(element.root).querySelector("paper-button");
-						expect(button.innerText.trim()).to.be.eql("OK");
+						expect(button.textContent.trim()).to.be.eql("OK");
 					});
 				});
 
