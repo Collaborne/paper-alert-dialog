@@ -27,7 +27,7 @@ Property           | Type    | Description
 ------------------ | ------- | -----------------------------------------------
 **title**          | String  | Title of the alert dialog
 **confirm-button** | String  | Text of the confirm button
-**dismiss-button** | String  | Text of the dismiss button
+**dismiss-button** | String  | Text of the dismiss button. The button is not shown if the property is empty.
 **opened**         | Boolean | Flag if the dialog is currently opened
 
 
