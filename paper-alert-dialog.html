@@ -10,7 +10,7 @@
 		    <p><content></content></p>
 			<div class='buttons'>
 				<paper-button dialog-dismiss hidden=[[!dismissButton]]>[[dismissButton]]</paper-button>
-				<paper-button dialog-confirm autofocus>[[confirmButton]]</paper-button>
+				<paper-button dialog-confirm autofocus on-tap='_tapConfirm'>[[confirmButton]]</paper-button>
 			</div>
 		</paper-dialog>
 	</template>
@@ -39,6 +39,11 @@
 		// Public methods
 		open: function() {
 			this.$.dialog.open();
+		},
+		
+		// Private methods
+		_tapConfirm: function() {
+			this.fire('confirm');
 		}
 	});
 

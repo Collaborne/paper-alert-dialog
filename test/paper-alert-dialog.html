@@ -65,11 +65,25 @@
 						expect(element.opened).to.be.eql(true);
 					});
 
-					test('closes when clicking on confirm button', function() {
-						var button = Polymer.dom(element.root).querySelector("paper-button");
+					test('closes when clicking on dismiss button', function() {
+						var button = Polymer.dom(element.root).querySelector("paper-button[dialog-dismiss]");
 						button.click();
 						
 						expect(element.opened).to.be.eql(false);
+					});
+					test('closes when clicking on confirm button', function() {
+						var button = Polymer.dom(element.root).querySelector("paper-button[dialog-confirm]");
+						button.click();
+						
+						expect(element.opened).to.be.eql(false);
+					});
+					test('fires confirm event when clicking on confirm button', function(done) {
+						element.addEventListener('confirm', function() {
+							done();
+						});
+
+				        var button = Polymer.dom(element.root).querySelector("paper-button[dialog-confirm]");
+						button.click();
 					});
 				});
 			});

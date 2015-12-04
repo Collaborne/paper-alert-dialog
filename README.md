@@ -14,7 +14,8 @@ paper-alert-dialog [![Bower version](https://badge.fury.io/bo/paper-alert-dialog
 <paper-alert-dialog
   title="Congratulations"
   confirm-button="Agree"
-  dismiss-button="Disagree">
+  dismiss-button="Disagree"
+  on-confirm="handleConfirm">
   It works!
 </paper-alert-dialog>
 ```
@@ -36,7 +37,21 @@ Property | Description
 -------- | ----------------
 **open** | Opens the dialog
 
-There is no explicit close() method because the user is expected to click the confirm button.
+There is no explicit close() method because the user is expected to click one of the buttons.
+
+
+## Methods
+
+Property | Description                                    
+-------- | ----------------
+**open** | Opens the dialog
+
+
+## Events
+
+Property    | Description                                    
+----------- | ----------------
+**confirm** | Fired when the user clicks on the confirm button
 
 
 ## Continuous integration
