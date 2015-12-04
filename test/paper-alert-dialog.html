@@ -16,7 +16,7 @@
 	
 		<test-fixture id="TrivialElement">
 			<template>
-				<paper-alert-dialog title="Congratulations" message="It works!" confirm-button="OK" dismiss-button="Dismiss"></paper-alert-dialog>
+				<paper-alert-dialog title="Congratulations" confirm-button="OK" dismiss-button="Dismiss">It works!</paper-alert-dialog>
 			</template>
 		</test-fixture>
 	
@@ -34,7 +34,7 @@
 						expect(title.textContent).to.be.eql("Congratulations");
 					});
 
-					test('sets message based on message attribute', function() {
+					test('sets message based on element content', function() {
 						var message = Polymer.dom(element.root).querySelector("p");
 						expect(message.textContent).to.be.eql("It works!");
 					});
