@@ -9,7 +9,8 @@
 		    <h2>[[title]]</h2>
 		    <p>[[message]]</p>
 			<div class='buttons'>
-				<paper-button dialog-confirm autofocus>[[button]]</paper-button>
+				<paper-button dialog-dismiss hidden=[[!dismissButton]]>[[dismissButton]]</paper-button>
+				<paper-button dialog-confirm autofocus>[[confirmButton]]</paper-button>
 			</div>
 		</paper-dialog>
 	</template>
@@ -25,7 +26,11 @@
 		properties: {
 			title: String,
 			message: String,
-			button: String,
+			confirmButton: {
+				type: String,
+				value: 'Confirm'
+			},
+			dismissButton: String,
 			opened: {
 				true: Boolean,
 				notify: true

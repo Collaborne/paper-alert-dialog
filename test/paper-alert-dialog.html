@@ -16,7 +16,7 @@
 	
 		<test-fixture id="TrivialElement">
 			<template>
-				<paper-alert-dialog title="Congratulations" message="It works!" button="OK"></paper-alert-dialog>
+				<paper-alert-dialog title="Congratulations" message="It works!" confirm-button="OK" dismiss-button="Dismiss"></paper-alert-dialog>
 			</template>
 		</test-fixture>
 	
@@ -39,9 +39,13 @@
 						expect(message.textContent).to.be.eql("It works!");
 					});
 
-					test('sets button based on button attribute', function() {
-						var button = Polymer.dom(element.root).querySelector("paper-button");
+					test('sets confirm-button based on confirm-button attribute', function() {
+						var button = Polymer.dom(element.root).querySelector("paper-button[dialog-confirm]");
 						expect(button.textContent.trim()).to.be.eql("OK");
+					});
+					test('sets dismiss-button based on dismiss-button attribute', function() {
+						var button = Polymer.dom(element.root).querySelector("paper-button[dialog-dismiss]");
+						expect(button.textContent.trim()).to.be.eql("Dismiss");
 					});
 				});
 

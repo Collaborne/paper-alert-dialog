@@ -14,19 +14,21 @@ paper-alert-dialog [![Bower version](https://badge.fury.io/bo/paper-alert-dialog
 <paper-alert-dialog
   title="Congratulations"
   message="It works!"
-  button="OK">
+  confirm-button="Agree"
+  dismiss-button="Disagree">
 </paper-alert-dialog>
 ```
 
 
 ## Properties
 
-Property    | Type    | Description                                    
------------ | ------- | -----------------------------------------------
-**title**   | String  | Title of the alert dialog
-**message** | String  | Message that is shown in the main part of the dialog
-**button**  | String  | Text of the confirm button
-**opened**  | Boolean | Flag if the dialog is currently opened
+Property           | Type    | Description                                    
+------------------ | ------- | -----------------------------------------------
+**title**          | String  | Title of the alert dialog
+**message**        | String  | Message that is shown in the main part of the dialog
+**confirm-button** | String  | Text of the confirm button
+**dismiss-button** | String  | Text of the dismiss button
+**opened**         | Boolean | Flag if the dialog is currently opened
 
 
 ## Methods
