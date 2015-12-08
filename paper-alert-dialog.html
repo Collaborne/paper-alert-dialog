@@ -38,6 +38,9 @@
 		
 		// Public methods
 		open: function() {
+			// Attach dialog to the body to ensure it's on top of all existing overlays
+			Polymer.dom(document.body).appendChild(this);
+			
 			this.$.dialog.open();
 		},
 		
