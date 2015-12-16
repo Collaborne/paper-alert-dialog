@@ -1,4 +1,4 @@
-paper-alert-dialog [![Bower version](https://badge.fury.io/bo/paper-alert-dialog.svg)](http://badge.fury.io/bo/paper-alert-dialog)
+paper-alert-dialog [![Bower version](https://badge.fury.io/bo/paper-alert-dialog.svg)](http://badge.fury.io/bo/paper-alert-dialog) [![Travis state](https://travis-ci.org/Collaborne/paper-alert-dialog.svg?branch=master)](https://travis-ci.org/Collaborne/paper-alert-dialog)
 =========
 
 `paper-alert-dialog` renders a material design dialog to alert users (Polymer 1.x).
@@ -52,11 +52,6 @@ Property | Description
 Property    | Description                                    
 ----------- | ----------------
 **confirm** | Fired when the user clicks on the confirm button
-
-
-## Continuous integration
-
-[Travis-CI](https://travis-ci.org/Collaborne/paper-alert-dialog) [![Travis state](https://travis-ci.org/Collaborne/paper-alert-dialog.svg?branch=master)](https://travis-ci.org/Collaborne/paper-alert-dialog)
 
 
 ## License
