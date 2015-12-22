@@ -6,7 +6,7 @@
 
 	<template>
 		<paper-dialog id='dialog' opened={{opened}} modal>
-		    <h2>[[title]]</h2>
+		    <h2 hidden=[[!title]]>[[title]]</h2>
 		    <p><content></content></p>
 			<div class='buttons'>
 				<paper-button dialog-dismiss hidden=[[!dismissButton]]>[[dismissButton]]</paper-button>
@@ -24,7 +24,10 @@
 	Polymer({
 		is: 'paper-alert-dialog',
 		properties: {
-			title: String,
+			title: {
+				type: String,
+				value: null
+			},
 			confirmButton: {
 				type: String,
 				value: 'Confirm'
