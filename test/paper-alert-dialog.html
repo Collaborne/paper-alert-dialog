@@ -40,11 +40,11 @@
 					});
 
 					test('sets confirm-button based on confirm-button attribute', function() {
-						var button = Polymer.dom(element.root).querySelector("paper-button[dialog-confirm]");
+						var button = Polymer.dom(element.root).querySelector("paper-button[confirm]");
 						expect(button.textContent.trim()).to.be.eql("OK");
 					});
 					test('sets dismiss-button based on dismiss-button attribute', function() {
-						var button = Polymer.dom(element.root).querySelector("paper-button[dialog-dismiss]");
+						var button = Polymer.dom(element.root).querySelector("paper-button[dismiss]");
 						expect(button.textContent.trim()).to.be.eql("Dismiss");
 					});
 				});
@@ -66,13 +66,13 @@
 					});
 
 					test('closes when clicking on dismiss button', function() {
-						var button = Polymer.dom(element.root).querySelector("paper-button[dialog-dismiss]");
+						var button = Polymer.dom(element.root).querySelector("paper-button[dismiss]");
 						button.click();
 						
 						expect(element.opened).to.be.eql(false);
 					});
 					test('closes when clicking on confirm button', function() {
-						var button = Polymer.dom(element.root).querySelector("paper-button[dialog-confirm]");
+						var button = Polymer.dom(element.root).querySelector("paper-button[confirm]");
 						button.click();
 						
 						expect(element.opened).to.be.eql(false);
@@ -82,7 +82,7 @@
 							done();
 						});
 
-				        var button = Polymer.dom(element.root).querySelector("paper-button[dialog-confirm]");
+				        var button = Polymer.dom(element.root).querySelector("paper-button[confirm]");
 						button.click();
 					});
 				});
