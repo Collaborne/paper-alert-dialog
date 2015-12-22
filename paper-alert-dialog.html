@@ -9,8 +9,8 @@
 		    <h2 hidden=[[!title]]>[[title]]</h2>
 		    <p><content></content></p>
 			<div class='buttons'>
-				<paper-button dialog-dismiss hidden=[[!dismissButton]]>[[dismissButton]]</paper-button>
-				<paper-button dialog-confirm autofocus on-tap='_tapConfirm'>[[confirmButton]]</paper-button>
+				<paper-button hidden=[[!dismissButton]] on-tap='close'>[[dismissButton]]</paper-button>
+				<paper-button autofocus on-tap='_tapConfirm'>[[confirmButton]]</paper-button>
 			</div>
 		</paper-dialog>
 	</template>
@@ -46,9 +46,17 @@
 			
 			this.$.dialog.open();
 		},
+		close: function() {
+			this.$.dialog.close();
+			
+			// Remove the dialog from the DOM
+			Polymer.dom(this.parentNode).removeChild(this);
+		},
 		
 		// Private methods
 		_tapConfirm: function() {
+			this.close();
+
 			this.fire('confirm');
 		}
 	});

@@ -5,17 +5,20 @@
 	</head>
 	
 	<body>
-		<paper-alert-dialog id="alert-dialog" title="Congratulations" dismiss-button="Cancel" confirm-button="OK">It work's!</paper-alert-dialog>
-		
-		<button type="button" onclick="openDialog()">Open</button>
+		<template is="dom-bind">
+			<paper-alert-dialog id="dialog" title="Congratulations" dismiss-button="Cancel" confirm-button="OK" on-confirm="confirm">It work's!</paper-alert-dialog>
+			
+			<button type="button" on-tap="openDialog">Open</button>
+		</template>
 	
 		<script>
-			function openDialog() {
-				var dialog = document.getElementById("alert-dialog");
-				if (dialog) {
-					dialog.open();
-				}
-		    }
+			var scope = document.querySelector("template[is=dom-bind]");
+			scope.openDialog = function(e) {
+				this.$.dialog.open();
+		    };
+		    scope.confirm = function(e) {
+		    	alert("Confirmed!");
+		    };
 		</script>
 	</body>
 </html>
