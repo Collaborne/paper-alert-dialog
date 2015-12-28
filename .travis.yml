@@ -11,5 +11,8 @@ before_script:
   - bower install
   - npm install polylint
   - polylint
+  - export PATH=$PWD/node_modules/.bin:$PATH
 
-script: xvfb-run wct
+script:
+  - xvfb-run wct
+  - bash ./gpages_build.sh ronnyroeller paper-alert-dialog "Ronny Roeller" ronny@collaborne.com
