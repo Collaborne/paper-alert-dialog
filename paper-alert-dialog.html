@@ -1,6 +1,7 @@
 <link rel="import" href="../polymer/polymer.html">
 <link rel="import" href="../paper-dialog/paper-dialog.html">
 <link rel="import" href="../paper-button/paper-button.html">
+<link rel="import" href="paper-alert-dialog-icon-header.html">
 
 <dom-module id="paper-alert-dialog">
 
@@ -14,7 +15,7 @@
 			</div>
 		</paper-dialog>
 	</template>
-	         
+
 </dom-module>
 
 <script>
@@ -38,21 +39,21 @@
 				notify: true
 			}
 		},
-		
+
 		// Public methods
 		open: function() {
 			// Attach dialog to the body to ensure it's on top of all existing overlays
 			Polymer.dom(document.body).appendChild(this);
-			
+
 			this.$.dialog.open();
 		},
 		close: function() {
 			this.$.dialog.close();
-			
+
 			// Remove the dialog from the DOM
 			Polymer.dom(this.parentNode).removeChild(this);
 		},
-		
+
 		// Private methods
 		_tapConfirm: function() {
 			this.close();
