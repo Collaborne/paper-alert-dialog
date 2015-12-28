@@ -15,4 +15,4 @@ before_script:
 
 script:
   - xvfb-run wct
-  - bash ./gpages_build.sh ronnyroeller paper-alert-dialog "Ronny Roeller" ronny@collaborne.com
+  - bash ./gpages_build.sh Collaborne paper-alert-dialog Collaborne info@collaborne.com
