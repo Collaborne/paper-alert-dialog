@@ -17,7 +17,13 @@
 
 # usage gp Polymer core-item [branch]
 # Run in a clean directory passing in a GitHub org and repo name
+echo "var: ${TRAVIS_REPO_SLUG}""
+
 IFS=/ read org repo <<< ${TRAVIS_REPO_SLUG}
+
+echo "org: $org"
+echo "repo: $repo"
+
 name=$1
 email=$2
 branch=${3:-"master"} # default to master when branch isn't specified
