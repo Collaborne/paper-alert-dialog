@@ -3,7 +3,7 @@ _[Demo and API Docs](http://collaborne.github.io/paper-alert-dialog)_
 paper-alert-dialog [![Bower version](https://badge.fury.io/bo/paper-alert-dialog.svg)](http://badge.fury.io/bo/paper-alert-dialog) [![Travis state](https://travis-ci.org/Collaborne/paper-alert-dialog.svg?branch=master)](https://travis-ci.org/Collaborne/paper-alert-dialog)
 =========
 
-`paper-alert-dialog` renders a material design dialog to alert users (Polymer 1.x).
+`paper-alert-dialog` renders a material design dialog to [alert users](http://www.google.es/design/spec/components/dialogs.html#dialogs-alerts) (Polymer 1.x).
 
 ![Screenshot](/doc/screenshot.png "Screenshot")
 
