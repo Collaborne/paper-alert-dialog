@@ -1,3 +1,4 @@
+#!/bin/bash -x
 # Version 1.0
 #
 # Modified to work with Travis CI automated builds
@@ -17,12 +18,8 @@
 
 # usage gp Polymer core-item [branch]
 # Run in a clean directory passing in a GitHub org and repo name
-echo "var: ${TRAVIS_REPO_SLUG}""
-
-IFS=/ read org repo <<< ${TRAVIS_REPO_SLUG}
-
-echo "org: $org"
-echo "repo: $repo"
+org=`echo ${TRAVIS_REPO_SLUG} | cut -f 1 -d /`
+repo=`echo ${TRAVIS_REPO_SLUG} | cut -f 2 -d /`
 
 name=$1
 email=$2
