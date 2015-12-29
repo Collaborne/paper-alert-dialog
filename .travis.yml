@@ -16,4 +16,4 @@ before_script:
 
 script:
   - xvfb-run wct
-  - bash ./gpages_build.sh Collaborne paper-alert-dialog Collaborne info@collaborne.com
+  - bash ./gpages_build.sh Collaborne info@collaborne.com

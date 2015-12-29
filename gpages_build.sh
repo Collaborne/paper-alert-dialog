@@ -17,11 +17,10 @@
 
 # usage gp Polymer core-item [branch]
 # Run in a clean directory passing in a GitHub org and repo name
-org=$1
-repo=$2
-name=$3
-email=$4
-branch=${5:-"master"} # default to master when branch isn't specified
+IFS=/ read org repo <<< ${TRAVIS_REPO_SLUG}
+name=$1
+email=$2
+branch=${3:-"master"} # default to master when branch isn't specified
 
 mkdir temp && cd temp
 
