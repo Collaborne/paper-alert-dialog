@@ -1,3 +1,4 @@
+# Version 1.0
 #
 # Modified to work with Travis CI automated builds
 # Original license follows
