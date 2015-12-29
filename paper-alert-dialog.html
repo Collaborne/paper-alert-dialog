@@ -3,6 +3,23 @@
 <link rel="import" href="../paper-button/paper-button.html">
 <link rel="import" href="paper-alert-dialog-icon-header.html">
 
+<!--
+`paper-alert-dialog` renders a material design dialog to alert users.
+
+### Example
+
+```html
+<paper-alert-dialog
+  title="Congratulations"
+  confirm-button="Agree"
+  dismiss-button="Disagree"
+  on-confirm="handleConfirm">
+  It works!
+</paper-alert-dialog>
+```
+
+@demo demo/index.html
+-->
 <dom-module id="paper-alert-dialog">
 
 	<template>
@@ -24,16 +41,39 @@
 
 	Polymer({
 		is: 'paper-alert-dialog',
+
+		/**
+		 * Fired when the user clicks on the confirm button
+		 *
+		 * @event confirm
+		 */
+
 		properties: {
+			/**
+			 * Title of the alert dialog
+			 */
 			title: {
 				type: String,
 				value: null
 			},
+
+			/**
+			 * Text of the confirm button
+			 */
 			confirmButton: {
 				type: String,
 				value: 'Confirm'
 			},
+
+			/**
+			 * Text of the dismiss button. The button is not shown if the
+			 * property is empty.
+			 */
 			dismissButton: String,
+
+			/**
+			 * True if the dialog is currently opened
+			 */
 			opened: {
 				true: Boolean,
 				notify: true
@@ -41,12 +81,21 @@
 		},
 
 		// Public methods
+
+		/**
+		 * Opens the alert dialog
+		 */
 		open: function() {
-			// Attach dialog to the body to ensure it's on top of all existing overlays
+			// Attach dialog to the body to ensure it's on top of all existing
+			// overlays
 			Polymer.dom(document.body).appendChild(this);
 
 			this.$.dialog.open();
 		},
+
+		/**
+		 * Closes the alert dialog
+		 */
 		close: function() {
 			this.$.dialog.close();
 

@@ -5,54 +5,11 @@ paper-alert-dialog [![Bower version](https://badge.fury.io/bo/paper-alert-dialog
 
 ![Screenshot](/doc/screenshot.png "Screenshot")
 
+_[Demo and API Docs](http://collaborne.github.io/paper-alert-dialog)_
 
-## Usage
+To install the element:
 
 `bower install paper-alert-dialog`
-
-```html
-<paper-alert-dialog
-  title="Congratulations"
-  confirm-button="Agree"
-  dismiss-button="Disagree"
-  on-confirm="handleConfirm">
-  It works!
-</paper-alert-dialog>
-```
-
-
-## Properties
-
-Property           | Type    | Description                                    
------------------- | ------- | -----------------------------------------------
-**title**          | String  | Title of the alert dialog
-**confirm-button** | String  | Text of the confirm button
-**dismiss-button** | String  | Text of the dismiss button. The button is not shown if the property is empty.
-**opened**         | Boolean | Flag if the dialog is currently opened
-
-
-## Methods
-
-Property | Description                                    
--------- | ----------------
-**open** | Opens the dialog
-
-There is no explicit close() method because the user is expected to click one of the buttons.
-
-
-## Methods
-
-Property | Description                                    
--------- | ----------------
-**open** | Opens the dialog
-
-
-## Events
-
-Property    | Description                                    
------------ | ----------------
-**confirm** | Fired when the user clicks on the confirm button
-
 
 ## License
 
@@ -71,4 +28,3 @@ Property    | Description
     WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
     License for the specific language governing permissions and limitations under
     the License.
-    

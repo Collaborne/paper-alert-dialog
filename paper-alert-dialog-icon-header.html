@@ -2,6 +2,24 @@
 <link rel="import" href="../iron-icon/iron-icon.html">
 <link rel="import" href="../paper-styles/paper-styles.html">
 
+<!--
+`paper-alert-dialog-icon-header` renders a material design header. It's
+intended to be used as the header of a `paper-alert-dialog` but can also be
+used without the dialog.
+
+### Example
+
+```html
+<paper-alert-dialog confirm-button="Got it">
+	<paper-alert-dialog-icon-header icon='icons:done'>
+		Well done!
+	</paper-alert-dialog-icon-header>
+	Excellent, you can move on.
+</paper-alert-dialog>
+```
+
+@demo demo/index.html
+-->
 <dom-module id="paper-alert-dialog-icon-header">
 
 	<style>
@@ -33,6 +51,10 @@
 	Polymer({
 		is: 'paper-alert-dialog-icon-header',
 		properties: {
+			/**
+			 * The name of the icon to use. The name should be of the form:
+			 * `iconset_name:icon_name`
+			 */
 			icon: String
 		}
 	});
