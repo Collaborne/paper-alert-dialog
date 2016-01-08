@@ -60,9 +60,12 @@
 						expect(element.opened).to.be.eql(false);
 					});
 
-					test('opens when calling method open()', function() {
+					test('opens when calling method open()', function(done) {
 						element.open();
-						expect(element.opened).to.be.eql(true);
+						setTimeout(function() {
+							expect(element.opened).to.be.eql(true);
+							done();
+						}, 10);
 					});
 
 					test('closes when clicking on dismiss button', function() {
