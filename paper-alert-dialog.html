@@ -24,12 +24,12 @@ Specification: [Material Design](http://www.google.es/design/spec/components/dia
 <dom-module id="paper-alert-dialog">
 
 	<template>
-		<paper-dialog id='dialog' opened={{opened}} modal>
+		<paper-dialog id="dialog" opened={{opened}} modal>
 		    <h2 hidden=[[!title]]>[[title]]</h2>
 		    <p><content></content></p>
-			<div class='buttons'>
-				<paper-button dismiss hidden=[[!dismissButton]] on-tap='close'>[[dismissButton]]</paper-button>
-				<paper-button confirm autofocus on-tap='_tapConfirm'>[[confirmButton]]</paper-button>
+			<div class="buttons">
+				<paper-button dismiss hidden=[[!dismissButton]] on-tap="close">[[dismissButton]]</paper-button>
+				<paper-button confirm autofocus on-tap="_tapConfirm">[[confirmButton]]</paper-button>
 			</div>
 		</paper-dialog>
 	</template>
