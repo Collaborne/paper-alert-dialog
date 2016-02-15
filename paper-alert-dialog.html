@@ -1,3 +1,4 @@
+<!doctype html>
 <link rel="import" href="../polymer/polymer.html">
 <link rel="import" href="../paper-dialog/paper-dialog.html">
 <link rel="import" href="../paper-button/paper-button.html">
@@ -24,11 +25,11 @@ Specification: [Material Design](http://www.google.es/design/spec/components/dia
 <dom-module id="paper-alert-dialog">
 
 	<template>
-		<paper-dialog id="dialog" opened={{opened}} modal>
-			<h2 hidden=[[!title]]>[[title]]</h2>
+		<paper-dialog id="dialog" opened="{{opened}}" modal>
+			<h2 hidden="[[!title]]">[[title]]</h2>
 			<p><content></content></p>
 			<div class="buttons">
-				<paper-button dismiss hidden=[[!dismissButton]] on-tap="close">[[dismissButton]]</paper-button>
+				<paper-button dismiss hidden="[[!dismissButton]]" on-tap="close">[[dismissButton]]</paper-button>
 				<paper-button confirm autofocus on-tap="_tapConfirm">[[confirmButton]]</paper-button>
 			</div>
 		</paper-dialog>
