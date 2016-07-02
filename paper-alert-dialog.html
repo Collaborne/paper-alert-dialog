@@ -29,7 +29,7 @@ Specification: [Material Design](http://www.google.es/design/spec/components/dia
 			<h2 hidden$="[[!title]]">[[title]]</h2>
 			<p><content></content></p>
 			<div class="buttons">
-				<paper-button dismiss hidden$="[[!dismissButton]]" on-tap="close">[[dismissButton]]</paper-button>
+				<paper-button dismiss hidden$="[[!dismissButton]]" on-tap="_tapDismiss">[[dismissButton]]</paper-button>
 				<paper-button confirm autofocus on-tap="_tapConfirm">[[confirmButton]]</paper-button>
 			</div>
 		</paper-dialog>
@@ -48,6 +48,12 @@ Specification: [Material Design](http://www.google.es/design/spec/components/dia
 		 * Fired when the user clicks on the confirm button
 		 *
 		 * @event confirm
+		 */
+
+		/**
+		 * Fired when the user clicks on the dismiss button
+		 *
+		 * @event dismiss
 		 */
 
 		properties: {
@@ -110,6 +116,12 @@ Specification: [Material Design](http://www.google.es/design/spec/components/dia
 		},
 
 		// Private methods
+		_tapDismiss: function() {
+			this.close();
+
+			this.fire('dismiss');
+		},
+
 		_tapConfirm: function() {
 			this.close();
 

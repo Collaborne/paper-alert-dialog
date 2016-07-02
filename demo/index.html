@@ -10,7 +10,15 @@
 
 	<body>
 		<template is="dom-bind">
-			<paper-alert-dialog id="dialog" title="Congratulations" dismiss-button="Cancel" confirm-button="OK" on-confirm="confirm">It work's!</paper-alert-dialog>
+			<paper-alert-dialog
+				id="dialog"
+				title="Congratulations"
+				dismiss-button="Cancel"
+				confirm-button="OK"
+				on-confirm="confirm"
+				on-dismiss="dismiss">
+				It work's!
+			</paper-alert-dialog>
 
 			<paper-alert-dialog id="dialogWithHeader" confirm-button="Got it">
 				<paper-alert-dialog-icon-header icon="icons:done">Well done!</paper-alert-dialog-icon-header>
@@ -29,8 +37,11 @@
 			scope.openDialogWithHeader = function(e) {
 				this.$.dialogWithHeader.open();
 		    };
-		    scope.confirm = function(e) {
+			scope.confirm = function(e) {
 		    	alert("Confirmed!");
+		    };
+			scope.dismiss = function(e) {
+		    	alert("Dismissed!");
 		    };
 		</script>
 	</body>
