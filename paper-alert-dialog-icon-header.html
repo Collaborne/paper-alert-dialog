@@ -23,22 +23,22 @@ used without the dialog.
 -->
 <dom-module id="paper-alert-dialog-icon-header">
 
-	<style>
-		:host {
-			display: block;
-			text-align: center;
-			margin-bottom: 40px;
-			@apply(--paper-font-display1);
-		}
-
-		.icon {
-			color: var(--paper-green-500);
-			--iron-icon-width: 64px;
-			--iron-icon-height: 64px;
-		}
-	</style>
-
 	<template>
+		<style>
+			:host {
+				display: block;
+				text-align: center;
+				margin-bottom: 40px;
+				@apply(--paper-font-display1);
+			}
+
+			.icon {
+				color: var(--paper-green-500);
+				--iron-icon-width: 64px;
+				--iron-icon-height: 64px;
+			}
+		</style>
+
 		<iron-icon icon="[[icon]]" class="icon"></iron-icon>
 		<div><content></content></div>
 	</template>
