@@ -111,8 +111,10 @@ Specification: [Material Design](http://www.google.es/design/spec/components/dia
 		close: function() {
 			this.$.dialog.close();
 
-			// Remove the dialog from the DOM
-			Polymer.dom(this.parentNode).removeChild(this);
+			// Remove dialog from the body if it is present in its local DOM
+			if(this.parentNode == document.body) {
+				Polymer.dom(document.body).removeChild(this);
+			}
 		},
 
 		// Private methods
