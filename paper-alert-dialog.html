@@ -27,7 +27,7 @@ Specification: [Material Design](http://www.google.es/design/spec/components/dia
 	<template>
 		<paper-dialog id="dialog" opened="{{opened}}" modal>
 			<h2 hidden$="[[!title]]">[[title]]</h2>
-			<p><content></content></p>
+			<p><slot></slot></p>
 			<div class="buttons">
 				<paper-button dismiss hidden$="[[!dismissButton]]" on-tap="_tapDismiss">[[dismissButton]]</paper-button>
 				<paper-button confirm autofocus on-tap="_tapConfirm">[[confirmButton]]</paper-button>
