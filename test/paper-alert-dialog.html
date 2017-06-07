@@ -16,77 +16,75 @@
 	
 		<test-fixture id="TrivialElement">
 			<template>
-				<paper-alert-dialog title="Congratulations" confirm-button="OK" dismiss-button="Dismiss">It works!</paper-alert-dialog>
+				<paper-alert-dialog title="Congratulations" confirm-button="OK" dismiss-button="Dismiss">
+				</paper-alert-dialog>
 			</template>
 		</test-fixture>
 	
 		<script>
-			suite('<paper-alert-dialog>', function() {
-				suite('set content behavior', function() {
-					var element;
-	
-					setup(function() {
-						element = fixture('TrivialElement');
-					});
-					
-					test('sets title based on title attribute', function() {
-						var title = Polymer.dom(element.root).querySelector("h2");
-						expect(title.textContent).to.be.eql("Congratulations");
-					});
-
-					test('sets message based on element content', function() {
-						var message = Polymer.dom(element.root).querySelector("p");
-						expect(message.textContent).to.be.eql("It works!");
-					});
-
-					test('sets confirm-button based on confirm-button attribute', function() {
-						var button = Polymer.dom(element.root).querySelector("paper-button[confirm]");
-						expect(button.textContent.trim()).to.be.eql("OK");
-					});
-					test('sets dismiss-button based on dismiss-button attribute', function() {
-						var button = Polymer.dom(element.root).querySelector("paper-button[dismiss]");
-						expect(button.textContent.trim()).to.be.eql("Dismiss");
-					});
-				});
-
-				suite('open/close behavior', function() {
-					var element;
-	
-					setup(function() {
-						element = fixture('TrivialElement');
-					});
-					
-					test('is closed by default', function() {
-						expect(element.opened).to.be.eql(false);
-					});
-
-					test('opens when calling method open()', function(done) {
-						element.open();
-						setTimeout(function() {
-							expect(element.opened).to.be.eql(true);
-							done();
-						}, 10);
-					});
-
-					test('closes when clicking on dismiss button', function() {
-						var button = Polymer.dom(element.root).querySelector("paper-button[dismiss]");
-						button.click();
+			window.addEventListener('WebComponentsReady', function() {
+				suite('<paper-alert-dialog>', function() {
+					suite('set content behavior', function() {
+						var element;
+		
+						setup(function() {
+							element = fixture('TrivialElement');
+						});
 						
-						expect(element.opened).to.be.eql(false);
-					});
-					test('closes when clicking on confirm button', function() {
-						var button = Polymer.dom(element.root).querySelector("paper-button[confirm]");
-						button.click();
-						
-						expect(element.opened).to.be.eql(false);
-					});
-					test('fires confirm event when clicking on confirm button', function(done) {
-						element.addEventListener('confirm', function() {
-							done();
+						test('sets title based on title attribute', function() {
+							var title = Polymer.dom(element.root).querySelector("h2");
+							expect(title.textContent).to.be.eql("Congratulations");
 						});
 
-				        var button = Polymer.dom(element.root).querySelector("paper-button[confirm]");
-						button.click();
+						test('sets confirm-button based on confirm-button attribute', function() {
+							var button = Polymer.dom(element.root).querySelector("paper-button[confirm]");
+							expect(button.textContent.trim()).to.be.eql("OK");
+						});
+						test('sets dismiss-button based on dismiss-button attribute', function() {
+							var button = Polymer.dom(element.root).querySelector("paper-button[dismiss]");
+							expect(button.textContent.trim()).to.be.eql("Dismiss");
+						});
+					});
+
+					suite('open/close behavior', function() {
+						var element;
+		
+						setup(function() {
+							element = fixture('TrivialElement');
+						});
+						
+						test('is closed by default', function() {
+							expect(element.opened).to.be.eql(false);
+						});
+
+						test('opens when calling method open()', function(done) {
+							element.open();
+							setTimeout(function() {
+								expect(element.opened).to.be.eql(true);
+								done();
+							}, 10);
+						});
+
+						test('closes when clicking on dismiss button', function() {
+							var button = Polymer.dom(element.root).querySelector("paper-button[dismiss]");
+							button.click();
+							
+							expect(element.opened).to.be.eql(false);
+						});
+						test('closes when clicking on confirm button', function() {
+							var button = Polymer.dom(element.root).querySelector("paper-button[confirm]");
+							button.click();
+							
+							expect(element.opened).to.be.eql(false);
+						});
+						test('fires confirm event when clicking on confirm button', function(done) {
+							element.addEventListener('confirm', function() {
+								done();
+							});
+
+							var button = Polymer.dom(element.root).querySelector("paper-button[confirm]");
+							button.click();
+						});
 					});
 				});
 			});
