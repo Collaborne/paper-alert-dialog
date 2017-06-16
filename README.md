@@ -1,15 +1,23 @@
-_[Demo and API Docs](http://collaborne.github.io/paper-alert-dialog)_
-
-paper-alert-dialog [![Bower version](https://badge.fury.io/bo/paper-alert-dialog.svg)](http://badge.fury.io/bo/paper-alert-dialog) [![Travis state](https://travis-ci.org/Collaborne/paper-alert-dialog.svg?branch=master)](https://travis-ci.org/Collaborne/paper-alert-dialog)
+paper-alert-dialog [![Bower version](https://badge.fury.io/bo/paper-alert-dialog.svg)](http://badge.fury.io/bo/paper-alert-dialog) [![Travis state](https://travis-ci.org/Collaborne/paper-alert-dialog.svg?branch=master)](https://travis-ci.org/Collaborne/paper-alert-dialog) [![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg)](https://www.webcomponents.org/Collaborne/paper-alert-dialog)
 =========
 
-`paper-alert-dialog` renders a material design dialog to [alert users](http://www.google.es/design/spec/components/dialogs.html#dialogs-alerts) (Polymer 1.x).
-
-![Screenshot](/doc/screenshot.png "Screenshot")
+`paper-alert-dialog` renders a material design dialog to [alert users](http://www.google.es/design/spec/components/dialogs.html#dialogs-alerts) (Polymer).
 
 To install the element:
 
 `bower install paper-alert-dialog`
+
+```html
+<paper-alert-dialog
+    id="dialog"
+    title="Congratulations"
+    dismiss-button="Cancel"
+    confirm-button="OK"
+    on-confirm="confirm"
+    on-dismiss="dismiss">
+    It work's!
+</paper-alert-dialog>
+```
 
 ## License
 

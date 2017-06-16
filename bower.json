@@ -3,7 +3,7 @@
   "authors": [
     "collaborne"
   ],
-  "description": "Web component that renders a material design dialog to alert user (Polymer 1.x)",
+  "description": "Web component that renders a material design dialog to alert user (Polymer)",
   "main": "paper-alert-dialog.html",
   "keywords": [
     "web-components",
