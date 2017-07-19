@@ -25,7 +25,7 @@ Specification: [Material Design](http://www.google.es/design/spec/components/dia
 <dom-module id="paper-alert-dialog">
 
 	<template>
-		<paper-dialog id="dialog" opened="{{opened}}" modal>
+		<paper-dialog id="dialog" opened="{{opened}}" with-backdrop>
 			<h2 hidden$="[[!title]]">[[title]]</h2>
 			<p><slot></slot></p>
 			<div class="buttons">
