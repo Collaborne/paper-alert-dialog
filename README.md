@@ -1,4 +1,8 @@
 paper-alert-dialog [![Bower version](https://badge.fury.io/bo/paper-alert-dialog.svg)](http://badge.fury.io/bo/paper-alert-dialog) [![Travis state](https://travis-ci.org/Collaborne/paper-alert-dialog.svg?branch=master)](https://travis-ci.org/Collaborne/paper-alert-dialog) [![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg)](https://www.webcomponents.org/Collaborne/paper-alert-dialog)
+  
+[![Published on Vaadin  Directory](https://img.shields.io/badge/Vaadin%20Directory-published-00b4f0.svg)](https://vaadin.com/directory/component/Collabornepaper-alert-dialog)
+[![Stars on vaadin.com/directory](https://img.shields.io/vaadin-directory/star/Collabornepaper-alert-dialog.svg)](https://vaadin.com/directory/component/Collabornepaper-alert-dialog)
+
 =========
 
 `paper-alert-dialog` renders a material design dialog to [alert users](http://www.google.es/design/spec/components/dialogs.html#dialogs-alerts) (Polymer).
